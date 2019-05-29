@@ -1,8 +1,13 @@
 # Network Edge Code Sample
-- 1. Create CSR1KV NonHA & HA Device
-- 2. AWS Connection with Virtual Device
-- 3. Establish BGP Peering
-- 4. Establish VPN Conncetivity
+- Create CSR1KV NonHA Device
+- Subscription Based License
+- AWS Connection with Virtual Device
+- Establish BGP Peering
+- Establish VPN Conncetivity
+- Create CSR1KV HA Device
+- AWS Connection with HA Device
+- Establish BGP Peering for HA Connections
+- Establish VPN Conncetivity for HA Device
 
 Development Guidelines
 
