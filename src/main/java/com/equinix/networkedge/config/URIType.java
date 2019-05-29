@@ -51,3 +51,4 @@ public enum URIType {
         return  this.pathSegment;
     }
 }
+ 
