@@ -47,4 +47,4 @@ public @Data class AdditionalBuyerInfo {
     private DatatypeENUM datatype;
 
     private Boolean captureInEmail;
-}
+} 
