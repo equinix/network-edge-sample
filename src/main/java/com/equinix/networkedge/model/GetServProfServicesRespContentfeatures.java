@@ -19,50 +19,50 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SpeedBand
+ * GetServProfServicesRespContentfeatures
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class SpeedBand {
-  @SerializedName("speed")
-  private Double speed = null;
+public class GetServProfServicesRespContentfeatures {
+  @SerializedName("cloudReach")
+  private Boolean cloudReach = null;
 
-  @SerializedName("unit")
-  private String unit = null;
+  @SerializedName("testProfile")
+  private Boolean testProfile = null;
 
-  public SpeedBand speed(Double speed) {
-    this.speed = speed;
+  public GetServProfServicesRespContentfeatures cloudReach(Boolean cloudReach) {
+    this.cloudReach = cloudReach;
     return this;
   }
 
    /**
-   * Get speed
-   * @return speed
+   * Get cloudReach
+   * @return cloudReach
   **/
-  @ApiModelProperty(example = "50.0", value = "")
-  public Double getSpeed() {
-    return speed;
+  @ApiModelProperty(example = "true", value = "")
+  public Boolean isCloudReach() {
+    return cloudReach;
   }
 
-  public void setSpeed(Double speed) {
-    this.speed = speed;
+  public void setCloudReach(Boolean cloudReach) {
+    this.cloudReach = cloudReach;
   }
 
-  public SpeedBand unit(String unit) {
-    this.unit = unit;
+  public GetServProfServicesRespContentfeatures testProfile(Boolean testProfile) {
+    this.testProfile = testProfile;
     return this;
   }
 
    /**
-   * Get unit
-   * @return unit
+   * Get testProfile
+   * @return testProfile
   **/
-  @ApiModelProperty(example = "MB", value = "")
-  public String getUnit() {
-    return unit;
+  @ApiModelProperty(example = "false", value = "")
+  public Boolean isTestProfile() {
+    return testProfile;
   }
 
-  public void setUnit(String unit) {
-    this.unit = unit;
+  public void setTestProfile(Boolean testProfile) {
+    this.testProfile = testProfile;
   }
 
 
@@ -74,24 +74,24 @@ public class SpeedBand {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SpeedBand speedBand = (SpeedBand) o;
-    return Objects.equals(this.speed, speedBand.speed) &&
-        Objects.equals(this.unit, speedBand.unit);
+    GetServProfServicesRespContentfeatures getServProfServicesRespContentfeatures = (GetServProfServicesRespContentfeatures) o;
+    return Objects.equals(this.cloudReach, getServProfServicesRespContentfeatures.cloudReach) &&
+        Objects.equals(this.testProfile, getServProfServicesRespContentfeatures.testProfile);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(speed, unit);
+    return Objects.hash(cloudReach, testProfile);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SpeedBand {\n");
+    sb.append("class GetServProfServicesRespContentfeatures {\n");
     
-    sb.append("    speed: ").append(toIndentedString(speed)).append("\n");
-    sb.append("    unit: ").append(toIndentedString(unit)).append("\n");
+    sb.append("    cloudReach: ").append(toIndentedString(cloudReach)).append("\n");
+    sb.append("    testProfile: ").append(toIndentedString(testProfile)).append("\n");
     sb.append("}");
     return sb.toString();
   }

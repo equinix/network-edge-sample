@@ -19,29 +19,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * SecondaryDeviceDeleteRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class SecondaryDeviceDeleteRequest {
+  @SerializedName("deactivationKey")
+  private String deactivationKey = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public SecondaryDeviceDeleteRequest deactivationKey(String deactivationKey) {
+    this.deactivationKey = deactivationKey;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Deactivation key for secondary device
+   * @return deactivationKey
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "8dfbd5ba3610234d9e550032603cc34762af140533e2c1de0111d3451d16eefd", value = "Deactivation key for secondary device")
+  public String getDeactivationKey() {
+    return deactivationKey;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setDeactivationKey(String deactivationKey) {
+    this.deactivationKey = deactivationKey;
   }
 
 
@@ -53,22 +53,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    SecondaryDeviceDeleteRequest secondaryDeviceDeleteRequest = (SecondaryDeviceDeleteRequest) o;
+    return Objects.equals(this.deactivationKey, secondaryDeviceDeleteRequest.deactivationKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(deactivationKey);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class SecondaryDeviceDeleteRequest {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    deactivationKey: ").append(toIndentedString(deactivationKey)).append("\n");
     sb.append("}");
     return sb.toString();
   }

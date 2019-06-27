@@ -18,30 +18,41 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Metadata
+ * SshAccessUpdateRequestDto
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class SshAccessUpdateRequestDto {
+  @SerializedName("sshAcl")
+  private List<Object> sshAcl = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public SshAccessUpdateRequestDto sshAcl(List<Object> sshAcl) {
+    this.sshAcl = sshAcl;
+    return this;
+  }
+
+  public SshAccessUpdateRequestDto addSshAclItem(Object sshAclItem) {
+    if (this.sshAcl == null) {
+      this.sshAcl = new ArrayList<Object>();
+    }
+    this.sshAcl.add(sshAclItem);
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get sshAcl
+   * @return sshAcl
   **/
   @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  public List<Object> getSshAcl() {
+    return sshAcl;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setSshAcl(List<Object> sshAcl) {
+    this.sshAcl = sshAcl;
   }
 
 
@@ -53,22 +64,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    SshAccessUpdateRequestDto sshAccessUpdateRequestDto = (SshAccessUpdateRequestDto) o;
+    return Objects.equals(this.sshAcl, sshAccessUpdateRequestDto.sshAcl);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(sshAcl);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class SshAccessUpdateRequestDto {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    sshAcl: ").append(toIndentedString(sshAcl)).append("\n");
     sb.append("}");
     return sb.toString();
   }

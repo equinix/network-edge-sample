@@ -19,29 +19,50 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * SoftwarePackage
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class SoftwarePackage {
+  @SerializedName("name")
+  private String name = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  @SerializedName("packageCode")
+  private String packageCode = null;
+
+  public SoftwarePackage name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Software package name
+   * @return name
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "Security", value = "Software package name")
+  public String getName() {
+    return name;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public SoftwarePackage packageCode(String packageCode) {
+    this.packageCode = packageCode;
+    return this;
+  }
+
+   /**
+   * Software package code
+   * @return packageCode
+  **/
+  @ApiModelProperty(example = "SEC", value = "Software package code")
+  public String getPackageCode() {
+    return packageCode;
+  }
+
+  public void setPackageCode(String packageCode) {
+    this.packageCode = packageCode;
   }
 
 
@@ -53,22 +74,24 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    SoftwarePackage softwarePackage = (SoftwarePackage) o;
+    return Objects.equals(this.name, softwarePackage.name) &&
+        Objects.equals(this.packageCode, softwarePackage.packageCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(name, packageCode);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class SoftwarePackage {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    packageCode: ").append(toIndentedString(packageCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

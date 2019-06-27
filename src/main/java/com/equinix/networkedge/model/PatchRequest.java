@@ -19,29 +19,50 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * PatchRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class PatchRequest {
+  @SerializedName("accessKey")
+  private String accessKey = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  @SerializedName("secretKey")
+  private String secretKey = null;
+
+  public PatchRequest accessKey(String accessKey) {
+    this.accessKey = accessKey;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get accessKey
+   * @return accessKey
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "AKIAIXKQARIFBC3QJKYQ", value = "")
+  public String getAccessKey() {
+    return accessKey;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setAccessKey(String accessKey) {
+    this.accessKey = accessKey;
+  }
+
+  public PatchRequest secretKey(String secretKey) {
+    this.secretKey = secretKey;
+    return this;
+  }
+
+   /**
+   * Get secretKey
+   * @return secretKey
+  **/
+  @ApiModelProperty(example = "ARIFW1lWbqNSOqSkCAOXAhep22UGyLJvkDBAIG", value = "")
+  public String getSecretKey() {
+    return secretKey;
+  }
+
+  public void setSecretKey(String secretKey) {
+    this.secretKey = secretKey;
   }
 
 
@@ -53,22 +74,24 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    PatchRequest patchRequest = (PatchRequest) o;
+    return Objects.equals(this.accessKey, patchRequest.accessKey) &&
+        Objects.equals(this.secretKey, patchRequest.secretKey);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(accessKey, secretKey);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class PatchRequest {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    accessKey: ").append(toIndentedString(accessKey)).append("\n");
+    sb.append("    secretKey: ").append(toIndentedString(secretKey)).append("\n");
     sb.append("}");
     return sb.toString();
   }

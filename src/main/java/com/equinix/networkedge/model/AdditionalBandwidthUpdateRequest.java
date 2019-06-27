@@ -19,29 +19,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * AdditionalBandwidthUpdateRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class AdditionalBandwidthUpdateRequest {
+  @SerializedName("additionalBandwidth")
+  private Integer additionalBandwidth = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public AdditionalBandwidthUpdateRequest additionalBandwidth(Integer additionalBandwidth) {
+    this.additionalBandwidth = additionalBandwidth;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Additional bandwidth to be configured on virtual device
+   * @return additionalBandwidth
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "200", required = true, value = "Additional bandwidth to be configured on virtual device")
+  public Integer getAdditionalBandwidth() {
+    return additionalBandwidth;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setAdditionalBandwidth(Integer additionalBandwidth) {
+    this.additionalBandwidth = additionalBandwidth;
   }
 
 
@@ -53,22 +53,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    AdditionalBandwidthUpdateRequest additionalBandwidthUpdateRequest = (AdditionalBandwidthUpdateRequest) o;
+    return Objects.equals(this.additionalBandwidth, additionalBandwidthUpdateRequest.additionalBandwidth);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(additionalBandwidth);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class AdditionalBandwidthUpdateRequest {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    additionalBandwidth: ").append(toIndentedString(additionalBandwidth)).append("\n");
     sb.append("}");
     return sb.toString();
   }

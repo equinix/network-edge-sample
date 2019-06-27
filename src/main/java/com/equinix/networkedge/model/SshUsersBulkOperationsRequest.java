@@ -18,30 +18,38 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Metadata
+ * SshUsersBulkOperationsRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class SshUsersBulkOperationsRequest {
+  @SerializedName("sshUsers")
+  private List<Object> sshUsers = new ArrayList<Object>();
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public SshUsersBulkOperationsRequest sshUsers(List<Object> sshUsers) {
+    this.sshUsers = sshUsers;
+    return this;
+  }
+
+  public SshUsersBulkOperationsRequest addSshUsersItem(Object sshUsersItem) {
+    this.sshUsers.add(sshUsersItem);
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get sshUsers
+   * @return sshUsers
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(required = true, value = "")
+  public List<Object> getSshUsers() {
+    return sshUsers;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setSshUsers(List<Object> sshUsers) {
+    this.sshUsers = sshUsers;
   }
 
 
@@ -53,22 +61,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    SshUsersBulkOperationsRequest sshUsersBulkOperationsRequest = (SshUsersBulkOperationsRequest) o;
+    return Objects.equals(this.sshUsers, sshUsersBulkOperationsRequest.sshUsers);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(sshUsers);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class SshUsersBulkOperationsRequest {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    sshUsers: ").append(toIndentedString(sshUsers)).append("\n");
     sb.append("}");
     return sb.toString();
   }

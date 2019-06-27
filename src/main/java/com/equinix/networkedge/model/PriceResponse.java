@@ -17,31 +17,64 @@ import java.util.Objects;
 
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
+import com.equinix.networkedge.model.Charges;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Metadata
+ * PriceResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class PriceResponse {
+  @SerializedName("charges")
+  private List<Charges> charges = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  @SerializedName("currency")
+  private String currency = null;
+
+  public PriceResponse charges(List<Charges> charges) {
+    this.charges = charges;
+    return this;
+  }
+
+  public PriceResponse addChargesItem(Charges chargesItem) {
+    if (this.charges == null) {
+      this.charges = new ArrayList<Charges>();
+    }
+    this.charges.add(chargesItem);
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Monthly recurring charges
+   * @return charges
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(value = "Monthly recurring charges")
+  public List<Charges> getCharges() {
+    return charges;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setCharges(List<Charges> charges) {
+    this.charges = charges;
+  }
+
+  public PriceResponse currency(String currency) {
+    this.currency = currency;
+    return this;
+  }
+
+   /**
+   * Get currency
+   * @return currency
+  **/
+  @ApiModelProperty(value = "")
+  public String getCurrency() {
+    return currency;
+  }
+
+  public void setCurrency(String currency) {
+    this.currency = currency;
   }
 
 
@@ -53,22 +86,24 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    PriceResponse priceResponse = (PriceResponse) o;
+    return Objects.equals(this.charges, priceResponse.charges) &&
+        Objects.equals(this.currency, priceResponse.currency);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(charges, currency);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class PriceResponse {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    charges: ").append(toIndentedString(charges)).append("\n");
+    sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("}");
     return sb.toString();
   }
