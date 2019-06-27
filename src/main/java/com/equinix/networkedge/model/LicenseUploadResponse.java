@@ -19,29 +19,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * LicenseUploadResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class LicenseUploadResponse {
+  @SerializedName("fileId")
+  private String fileId = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public LicenseUploadResponse fileId(String fileId) {
+    this.fileId = fileId;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get fileId
+   * @return fileId
   **/
   @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  public String getFileId() {
+    return fileId;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setFileId(String fileId) {
+    this.fileId = fileId;
   }
 
 
@@ -53,22 +53,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    LicenseUploadResponse licenseUploadResponse = (LicenseUploadResponse) o;
+    return Objects.equals(this.fileId, licenseUploadResponse.fileId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(fileId);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class LicenseUploadResponse {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    fileId: ").append(toIndentedString(fileId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

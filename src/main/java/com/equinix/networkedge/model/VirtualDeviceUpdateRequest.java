@@ -19,29 +19,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * VirtualDeviceUpdateRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class VirtualDeviceUpdateRequest {
+  @SerializedName("virtualDeviceName")
+  private String virtualDeviceName = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public VirtualDeviceUpdateRequest virtualDeviceName(String virtualDeviceName) {
+    this.virtualDeviceName = virtualDeviceName;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Virtual Device Name
+   * @return virtualDeviceName
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "Router1-csr1000v", value = "Virtual Device Name")
+  public String getVirtualDeviceName() {
+    return virtualDeviceName;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setVirtualDeviceName(String virtualDeviceName) {
+    this.virtualDeviceName = virtualDeviceName;
   }
 
 
@@ -53,22 +53,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    VirtualDeviceUpdateRequest virtualDeviceUpdateRequest = (VirtualDeviceUpdateRequest) o;
+    return Objects.equals(this.virtualDeviceName, virtualDeviceUpdateRequest.virtualDeviceName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(virtualDeviceName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class VirtualDeviceUpdateRequest {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    virtualDeviceName: ").append(toIndentedString(virtualDeviceName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

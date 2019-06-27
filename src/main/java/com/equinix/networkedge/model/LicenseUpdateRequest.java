@@ -19,29 +19,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * LicenseUpdateRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class LicenseUpdateRequest {
+  @SerializedName("token")
+  private String token = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public LicenseUpdateRequest token(String token) {
+    this.token = token;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get token
+   * @return token
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "A1025025", value = "")
+  public String getToken() {
+    return token;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setToken(String token) {
+    this.token = token;
   }
 
 
@@ -53,22 +53,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    LicenseUpdateRequest licenseUpdateRequest = (LicenseUpdateRequest) o;
+    return Objects.equals(this.token, licenseUpdateRequest.token);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(token);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class LicenseUpdateRequest {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("}");
     return sb.toString();
   }

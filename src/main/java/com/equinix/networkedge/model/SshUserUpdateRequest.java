@@ -19,29 +19,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * SshUserUpdateRequest
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class SshUserUpdateRequest {
+  @SerializedName("password")
+  private String password = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public SshUserUpdateRequest password(String password) {
+    this.password = password;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * At least 6 and upto a maximum of 12 alphanumeric characters. The only special characters allowed are - _ $ @
+   * @return password
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "pass12", required = true, value = "At least 6 and upto a maximum of 12 alphanumeric characters. The only special characters allowed are - _ $ @")
+  public String getPassword() {
+    return password;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setPassword(String password) {
+    this.password = password;
   }
 
 
@@ -53,22 +53,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    SshUserUpdateRequest sshUserUpdateRequest = (SshUserUpdateRequest) o;
+    return Objects.equals(this.password, sshUserUpdateRequest.password);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(password);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class SshUserUpdateRequest {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("}");
     return sb.toString();
   }

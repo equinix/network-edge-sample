@@ -19,29 +19,50 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * SshUserExists
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class SshUserExists {
+  @SerializedName("metroCode")
+  private String metroCode = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  @SerializedName("sshUsername")
+  private String sshUsername = null;
+
+  public SshUserExists metroCode(String metroCode) {
+    this.metroCode = metroCode;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get metroCode
+   * @return metroCode
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "SV", value = "")
+  public String getMetroCode() {
+    return metroCode;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setMetroCode(String metroCode) {
+    this.metroCode = metroCode;
+  }
+
+  public SshUserExists sshUsername(String sshUsername) {
+    this.sshUsername = sshUsername;
+    return this;
+  }
+
+   /**
+   * Get sshUsername
+   * @return sshUsername
+  **/
+  @ApiModelProperty(example = "cust0001_DC", value = "")
+  public String getSshUsername() {
+    return sshUsername;
+  }
+
+  public void setSshUsername(String sshUsername) {
+    this.sshUsername = sshUsername;
   }
 
 
@@ -53,22 +74,24 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    SshUserExists sshUserExists = (SshUserExists) o;
+    return Objects.equals(this.metroCode, sshUserExists.metroCode) &&
+        Objects.equals(this.sshUsername, sshUserExists.sshUsername);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(metroCode, sshUsername);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class SshUserExists {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    metroCode: ").append(toIndentedString(metroCode)).append("\n");
+    sb.append("    sshUsername: ").append(toIndentedString(sshUsername)).append("\n");
     sb.append("}");
     return sb.toString();
   }

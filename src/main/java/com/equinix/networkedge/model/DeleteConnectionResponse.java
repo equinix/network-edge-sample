@@ -19,50 +19,50 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * SpeedBand
+ * DeleteConnectionResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class SpeedBand {
-  @SerializedName("speed")
-  private Double speed = null;
+public class DeleteConnectionResponse {
+  @SerializedName("message")
+  private String message = null;
 
-  @SerializedName("unit")
-  private String unit = null;
+  @SerializedName("primaryConnectionId")
+  private String primaryConnectionId = null;
 
-  public SpeedBand speed(Double speed) {
-    this.speed = speed;
+  public DeleteConnectionResponse message(String message) {
+    this.message = message;
     return this;
   }
 
    /**
-   * Get speed
-   * @return speed
+   * Get message
+   * @return message
   **/
-  @ApiModelProperty(example = "50.0", value = "")
-  public Double getSpeed() {
-    return speed;
+  @ApiModelProperty(example = "Message", value = "")
+  public String getMessage() {
+    return message;
   }
 
-  public void setSpeed(Double speed) {
-    this.speed = speed;
+  public void setMessage(String message) {
+    this.message = message;
   }
 
-  public SpeedBand unit(String unit) {
-    this.unit = unit;
+  public DeleteConnectionResponse primaryConnectionId(String primaryConnectionId) {
+    this.primaryConnectionId = primaryConnectionId;
     return this;
   }
 
    /**
-   * Get unit
-   * @return unit
+   * Get primaryConnectionId
+   * @return primaryConnectionId
   **/
-  @ApiModelProperty(example = "MB", value = "")
-  public String getUnit() {
-    return unit;
+  @ApiModelProperty(example = "xxxxx191-xx70-xxxx-xx04-xxxxxxxa37xx", value = "")
+  public String getPrimaryConnectionId() {
+    return primaryConnectionId;
   }
 
-  public void setUnit(String unit) {
-    this.unit = unit;
+  public void setPrimaryConnectionId(String primaryConnectionId) {
+    this.primaryConnectionId = primaryConnectionId;
   }
 
 
@@ -74,24 +74,24 @@ public class SpeedBand {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SpeedBand speedBand = (SpeedBand) o;
-    return Objects.equals(this.speed, speedBand.speed) &&
-        Objects.equals(this.unit, speedBand.unit);
+    DeleteConnectionResponse deleteConnectionResponse = (DeleteConnectionResponse) o;
+    return Objects.equals(this.message, deleteConnectionResponse.message) &&
+        Objects.equals(this.primaryConnectionId, deleteConnectionResponse.primaryConnectionId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(speed, unit);
+    return Objects.hash(message, primaryConnectionId);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SpeedBand {\n");
+    sb.append("class DeleteConnectionResponse {\n");
     
-    sb.append("    speed: ").append(toIndentedString(speed)).append("\n");
-    sb.append("    unit: ").append(toIndentedString(unit)).append("\n");
+    sb.append("    message: ").append(toIndentedString(message)).append("\n");
+    sb.append("    primaryConnectionId: ").append(toIndentedString(primaryConnectionId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -19,29 +19,50 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * OptionalService
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class OptionalService {
+  @SerializedName("name")
+  private String name = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  @SerializedName("serviceCode")
+  private String serviceCode = null;
+
+  public OptionalService name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get name
+   * @return name
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "VPN", value = "")
+  public String getName() {
+    return name;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public OptionalService serviceCode(String serviceCode) {
+    this.serviceCode = serviceCode;
+    return this;
+  }
+
+   /**
+   * Get serviceCode
+   * @return serviceCode
+  **/
+  @ApiModelProperty(example = "VPN", value = "")
+  public String getServiceCode() {
+    return serviceCode;
+  }
+
+  public void setServiceCode(String serviceCode) {
+    this.serviceCode = serviceCode;
   }
 
 
@@ -53,22 +74,24 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    OptionalService optionalService = (OptionalService) o;
+    return Objects.equals(this.name, optionalService.name) &&
+        Objects.equals(this.serviceCode, optionalService.serviceCode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(name, serviceCode);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class OptionalService {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    serviceCode: ").append(toIndentedString(serviceCode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

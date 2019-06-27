@@ -15,35 +15,14 @@ package com.equinix.networkedge.model;
 
 import java.util.Objects;
 
-import com.google.gson.annotations.SerializedName;
-import io.swagger.annotations.ApiModelProperty;
+import com.equinix.networkedge.model.ErrorResponse;
+import java.util.ArrayList;
 
 /**
- * Metadata
+ * ErrorResponseArray
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
-
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
-    return this;
-  }
-
-   /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
-  **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
-  }
-
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
-  }
-
+public class ErrorResponseArray extends ArrayList<ErrorResponse> {
 
   @Override
   public boolean equals(Object o) {
@@ -53,22 +32,20 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    return super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(super.hashCode());
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
-    
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("class ErrorResponseArray {\n");
+    sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -19,29 +19,29 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * SshUserInfoDissociateResponse
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class SshUserInfoDissociateResponse {
+  @SerializedName("sshUserDeleted")
+  private Boolean sshUserDeleted = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public SshUserInfoDissociateResponse sshUserDeleted(Boolean sshUserDeleted) {
+    this.sshUserDeleted = sshUserDeleted;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * true &#x3D; the ssh user has been deleted since there are no more devices associated to this userfalse &#x3D; the ssh user has not been deleted since some associations to devices exist.
+   * @return sshUserDeleted
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "false", value = "true = the ssh user has been deleted since there are no more devices associated to this userfalse = the ssh user has not been deleted since some associations to devices exist.")
+  public Boolean isSshUserDeleted() {
+    return sshUserDeleted;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setSshUserDeleted(Boolean sshUserDeleted) {
+    this.sshUserDeleted = sshUserDeleted;
   }
 
 
@@ -53,22 +53,22 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    SshUserInfoDissociateResponse sshUserInfoDissociateResponse = (SshUserInfoDissociateResponse) o;
+    return Objects.equals(this.sshUserDeleted, sshUserInfoDissociateResponse.sshUserDeleted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(sshUserDeleted);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class SshUserInfoDissociateResponse {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    sshUserDeleted: ").append(toIndentedString(sshUserDeleted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

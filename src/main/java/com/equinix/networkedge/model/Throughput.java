@@ -19,29 +19,50 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * Metadata
+ * Throughput
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-20T13:45:54.773-07:00")
-public class Metadata {
-  @SerializedName("supportedInterfaceCount")
-  private Integer supportedInterfaceCount = null;
+public class Throughput {
+  @SerializedName("throughput")
+  private Integer throughput = null;
 
-  public Metadata supportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  @SerializedName("throughputUnit")
+  private String throughputUnit = null;
+
+  public Throughput throughput(Integer throughput) {
+    this.throughput = throughput;
     return this;
   }
 
    /**
-   * Get supportedInterfaceCount
-   * @return supportedInterfaceCount
+   * Get throughput
+   * @return throughput
   **/
-  @ApiModelProperty(value = "")
-  public Integer getSupportedInterfaceCount() {
-    return supportedInterfaceCount;
+  @ApiModelProperty(example = "500", value = "")
+  public Integer getThroughput() {
+    return throughput;
   }
 
-  public void setSupportedInterfaceCount(Integer supportedInterfaceCount) {
-    this.supportedInterfaceCount = supportedInterfaceCount;
+  public void setThroughput(Integer throughput) {
+    this.throughput = throughput;
+  }
+
+  public Throughput throughputUnit(String throughputUnit) {
+    this.throughputUnit = throughputUnit;
+    return this;
+  }
+
+   /**
+   * Get throughputUnit
+   * @return throughputUnit
+  **/
+  @ApiModelProperty(example = "Mbps", value = "")
+  public String getThroughputUnit() {
+    return throughputUnit;
+  }
+
+  public void setThroughputUnit(String throughputUnit) {
+    this.throughputUnit = throughputUnit;
   }
 
 
@@ -53,22 +74,24 @@ public class Metadata {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Metadata metadata = (Metadata) o;
-    return Objects.equals(this.supportedInterfaceCount, metadata.supportedInterfaceCount);
+    Throughput throughput = (Throughput) o;
+    return Objects.equals(this.throughput, throughput.throughput) &&
+        Objects.equals(this.throughputUnit, throughput.throughputUnit);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(supportedInterfaceCount);
+    return Objects.hash(throughput, throughputUnit);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Metadata {\n");
+    sb.append("class Throughput {\n");
     
-    sb.append("    supportedInterfaceCount: ").append(toIndentedString(supportedInterfaceCount)).append("\n");
+    sb.append("    throughput: ").append(toIndentedString(throughput)).append("\n");
+    sb.append("    throughputUnit: ").append(toIndentedString(throughputUnit)).append("\n");
     sb.append("}");
     return sb.toString();
   }
